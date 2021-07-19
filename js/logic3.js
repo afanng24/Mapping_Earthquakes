@@ -20,7 +20,7 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
 // Accessing the Toronto neighborhoods GeoJSON URL.
 let torontoHoods = "https://raw.githubusercontent.com/afanng24/Mapping_Earthquakes/main/torontoNeighborhoods.json";
-d3.json(torontoHoods).then(function(data) {
+d3.json("torontoHoods").then(function(data) {
     console.log(data);
   // Creating a GeoJSON layer with the retrieved data.
     L.geoJson(data).addTo(map);
